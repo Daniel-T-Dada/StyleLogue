@@ -6,14 +6,14 @@ StyleLogue is a mobile-first Nigerian fashion catalogue for discovering, saving,
 
 - A curated catalogue of Nigerian fashion styles with photos, descriptions, and tags.
 - A quick way to browse by category, explore trending looks, and search by keywords.
-- A lightweight inspiration board that lets you save favourites and share designs with a tailor via WhatsApp.
+- A lightweight inspiration board that lets you save favorites and share designs with a tailor via WhatsApp.
 
 ## How it works
 
 - **Next.js App Router** powers all pages in `app/`, while Tailwind CSS handles styling.
 - **Static data** lives in `data/styles.js`, where categories, style details, and search helpers are defined.
 - **Search & filters** run on the client to show results instantly.
-- **Favourites** are persisted in the browser using `useFavourites`, making it easy to revisit saved looks.
+- **Favorites** are persisted in the browser using `useFavourites`, making it easy to revisit saved looks.
 - **Sharing** uses a WhatsApp deep link so users can send design details directly to a tailor.
 
 ## Where to use it
@@ -27,7 +27,7 @@ StyleLogue is designed to feel great on mobile devices but works on any modern b
 | Styles | `/styles` | Full catalogue view. |
 | Style Detail | `/styles/[id]` | Detail view with share/favourite actions. |
 | Search | `/search` | Keyword search and suggested queries. |
-| Favourites | `/favorites` | Saved styles for quick access. |
+| Favorites | `/favorites` | Saved styles for quick access. |
 
 ## When to use it
 
