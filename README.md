@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StyleLogue
+
+StyleLogue is a mobile-first Nigerian fashion catalogue for discovering, saving, and sharing beautiful local styles. It curates popular categories like Senator, Ankara, Adire, Agbada, Lace/Aso-ebi, and Kaftan so you can quickly find inspiration and share it with a tailor.
+
+## What is StyleLogue?
+
+- A curated catalogue of Nigerian fashion styles with photos, descriptions, and tags.
+- A quick way to browse by category, explore trending looks, and search by keywords.
+- A lightweight inspiration board that lets you save favorites and share designs with a tailor via WhatsApp.
+
+## How it works
+
+- **Next.js App Router** powers all pages in `app/`, while Tailwind CSS handles styling.
+- **Static data** lives in `data/styles.js`, where categories, style details, and search helpers are defined.
+- **Search & filters** run on the client to show results instantly.
+- **Favorites** are persisted in the browser using `useFavourites`, making it easy to revisit saved looks.
+- **Sharing** uses a WhatsApp deep link so users can send design details directly to a tailor.
+
+## Where to use it
+
+StyleLogue is designed to feel great on mobile devices but works on any modern browser. Core routes include:
+
+| Page | Route | Purpose |
+| --- | --- | --- |
+| Home | `/` | Hero, categories carousel, and trending styles. |
+| Categories | `/categories` | Browse all style categories. |
+| Styles | `/styles` | Full catalogue view. |
+| Style Detail | `/styles/[id]` | Detail view with share/favourite actions. |
+| Search | `/search` | Keyword search and suggested queries. |
+| Favorites | `/favorites` | Saved styles for quick access. |
+
+## When to use it
+
+- Planning outfits for weddings, ceremonies, or cultural events.
+- Gathering inspiration before meeting a tailor.
+- Saving and comparing styles across different categories.
+- Sharing a reference look with friends or clients.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ (recommended for Next.js 16)
+
+### Install & run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Build and production start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customizing the catalogue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Update categories and styles in `data/styles.js`.
+- Add new images by linking to hosted assets (or move them into `public/`).
+- Adjust layout components in `components/` if you want to change the UI.
 
-## Deploy on Vercel
+## Tech stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 16 / React 19**
+- **Tailwind CSS**
+- **Radix UI + Lucide icons**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deploy to any Node-compatible host. Vercel provides the fastest path for Next.js deployments.
